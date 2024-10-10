@@ -1,0 +1,670 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="bootstrap.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 980px){
+    body {
+        width: 980px;
+    }
+}
+
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #5364cc;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1 {
+    text-align: center;
+}
+h2,h3 {
+    text-align: left;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+h3 {
+    font-weight: 600;
+    margin: 16px 0px 4px 0px;
+}
+
+.paper-title {
+    padding: 1px 0px 1px 0px;
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.col-1 {
+     width: 100%;
+     float: left;
+}
+
+.author-row, .affil-row {
+    font-size: 26px;
+}
+
+.author-row-new { 
+    text-align: center; 
+}
+
+.author-row-new a {
+    display: inline-block;
+    font-size: 20px;
+    padding: 4px;
+}
+
+.author-row-new sup {
+    color: #313436;
+    font-size: 12px;
+}
+
+.affiliations-new {
+    font-size: 18px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 26px;
+}
+.affiliatons {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 18px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+    margin: 0.25em;
+}
+.caption {
+    font-size: 16px;
+    color: #666;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+
+video {
+    display: block;
+    margin: auto;
+}
+
+
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.paper-btn-coming-soon {
+    position: relative; 
+    top: 0;
+    left: 0;
+}
+
+.coming-soon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #5364cc;
+  color: white !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+
+.paper-btn:hover {
+    opacity: 0.85;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.venue {
+    font-size: 23px;
+}
+
+.topnav {
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.topnav div {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.topnav a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav img {
+    padding: 2px 0px;
+    width: 100%;
+    margin: 0.2em 0px 0.3em 0px;
+    vertical-align: middle;
+}
+
+pre {
+    font-size: 0.9em;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    background-color: rgb(235, 235, 235);
+    overflow-x: auto;
+}
+
+.download-thumb {
+    display: flex;
+}
+
+@media only screen and (max-width: 620px) {
+    .download-thumb {
+        display: none;
+    }
+}
+
+.paper-stuff {
+    width: 50%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 620px) {
+    .paper-stuff {
+        width: 100%;
+    }
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  text-align: center;
+  float: left;
+  width: 16.666%;
+  padding: 5px;
+}
+.column3 {
+  text-align: center;
+  float: left;
+  width: 33.333%;
+  padding: 5px;
+}
+.column4 {
+  text-align: center;
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.column5 {
+  text-align: center;
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+.border-right {
+    border-right: 1px solid black;
+}
+.border-bottom{
+    border-bottom: 1px solid black;
+}
+
+
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+
+
+
+
+
+
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+
+
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .column3 {
+    width: 100%;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="bootstrap-grid.css">
+
+<script type="text/javascript" src="../js/hidebib.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+    <head>
+        <title>Multiagent Finetuning of Language Models</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:description" content="Hierarchical Planning with Foundation Models"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <meta name="twitter:title" content="Multiagent Finetuning of Language Models">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="">
+    </head>
+
+ <body>
+
+
+<div class="container">
+    <div class="paper-title">
+    <h1> 
+        Multiagent Finetuning of Language Models
+    </div>
+
+    <div id="authors">
+        <center>
+            <div class="author-row-new">
+                <a href="https://vsubramaniam851.github.io/">Vighnesh Subramaniam*<sup>1</sup></a>,
+                <a href="https://yilundu.github.io/">Yilun Du*<sup>1</sup></a>,
+                <a href="https://scholar.google.com/citations?user=rRJ9wTJMUB8C&hl=en">Joshua B Tenenbaum<sup>1</sup></a>,
+                <a href="https://groups.csail.mit.edu/vision/torralbalab/">Antonio Torralba<sup>1</sup></a>,
+                <a href="https://people.csail.mit.edu/lishuang/">Shuang Li<sup>2</sup></a>,
+                <a href="https://scholar.google.com/citations?user=Vzr1RukAAAAJ&hl=en">Igor Mordatch<sup>3</sup></a>
+            </div>
+        </center>
+        <center>
+        <div class="affiliations">
+            <span><sup>1</sup> MIT</span>
+            <span><sup>2</sup> Stanford University</span><br/>
+            <span><sup>3</sup> Google Brain</span><br/>
+        </div>
+
+        <br>*indicates equal contribution.
+
+        <!-- <div class="affil-row">
+            <div class="venue text-center"><b>NeurIPS 2023</b></div>
+        </div> -->
+
+        </center>
+
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+            <a class="paper-btn" href="https://arxiv.org/abs/2309.08587">
+                <span class="material-icons"> description </span> 
+                 Paper
+            </a>
+            <div class="paper-btn-coming-soon">
+                <a class="paper-btn" href="https://github.com/anuragajay/hip/tree/main">
+                    <span class="material-icons"> code </span>
+                    Code
+                </a>
+            </div>
+        </div></div>
+    </div>
+
+    
+    <!-- <section id="teaser-image">
+        <center>
+            <figure>
+                <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
+                    <source src="assets/LION_video_v10.mp4#t=0.001" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure>
+
+        </center>
+    </section>
+     -->
+
+
+    <br>
+    <section id="abstract"/>
+        <hr>
+        <h2>Abstract</h2>
+        <div class="flex-row">
+            <p>
+                Large language models (LLMs) have achieved remarkable performance in recent years but are fundamentally limited by the underlying training data. To improve models beyond the training data, recent works have explored how LLMs can be used to generate synthetic data for autonomous self-improvement. However, successive steps of self-improvement can reach a point of diminishing returns. In this work, we propose a complementary approach towards self-improvement where finetuning is applied to a multiagent society of language models. A set of language models are initialized from the same base model and then are specialized by independently updating each model using data generated by the model under multiagent interaction with other models. By training each model on independent sets of data, we illustrate how this approach enables specialization across models and diversification over the set of models. As a result, our overall system is able to autonomously improve over many more rounds of fine-tuning than single-agent self-improvement methods. We quantitatively illustrate the efficacy of the approach across a wide suite of reasoning tasks. 
+            </p>
+        </div>
+    </section>
+    <section id="method"/>
+        <hr>
+        <h2>Method</h2>
+            <figure>
+                <img src="img/main4.png", style="width:950px">
+            </figure>
+            <div class="flex-row">
+                <p>
+                We propose <i>Multiagent Finetuning</i> a new approach to self-improvement, finetunes a multiagent set of language models from the same base model and then independently specializes each model to capture parts of a task of interest. We first use multiagent debate and majority voting to create the finetuning datasets (left). These datasets are then used to finetune the generation and critic agents (right).
+                </p>
+            </div>
+            <div class="flex-row">
+                <p>
+                    <b>Finetuning Generator Agents</b> When finetuning generation agents, we use the majority voted result ("correct" output) to select first-round responses from each agent.
+                </p>
+            </div>
+            <div class="flex-row">
+                <p>
+                    <b>Finetuning Critic Agents</b> We finetune critic agents using responses from the final round based on whether responses match the majority voted result (mix of "correct and incorrect" outputs).
+                </p>
+            </div>
+            <div class="flex-row">
+                <p>
+                    <b>Inference</b> The finetuned agents are combined through multiagent debate to generate more accurate answers.  In this figure, we illustrate a single finetuning iteration. Applying multiple rounds of finetuning iterations can significantly boost performance.
+                </p>
+            </div>
+    </section>
+
+    <section id="results_overview"/>
+    <hr>
+    <h2>Results Overview</h2>
+        <br><br>
+        <div class="mx-auto">
+            <center><img class="card-img-top" src="img/multiagent_finetuning_results.png" style="width:950px"></center>
+        </div>
+        <center>We apply multiagent finetuning to 4 LLMs and find significant improvement in comparison to several other finetuning self-improvement methods.</center>
+
+        <div class="mx-auto">
+            <center><img class="card-img-top" src="img/multi-iters-ft.png" style="width:950px"></center>
+        </div>
+        <center>We apply multiple rounds of multiagent finetuning to several LLMs and find that results consistently improve across multiple iterations of finetuning.</center>
+    </section>
+
+    <div class="section">
+        <h2>Preserving Diversity during Finetuning</h2>
+        <hr>
+        <p>
+           We focus on applying multiple iterations of finetuning, which generally reduces language model performance due to a decrease in internal diversity in the model. With multiagent finetuning, we preserve diversity over rounds of finetuning and find our approach encourages more diverse solution proposals from agents than baselines.
+        </p>
+        <figure>
+            <a>
+                <img class="centered" width="95%" src="img/embed_diss-iters-ft.png"> 
+            </a>
+            <p class="caption-right">
+                <b>Diversity of proposals from agents during multiple iterations of multiagent finetuning in comparison to a baseline finetuning method. Diversity measured using embedding dissimilarity among T5 embeddings of agent responses. Multiagent finetuning has more diverse responses<br>
+        </figure>
+    </div>
+
+    <div class="section">
+        <h2>Multiagent finetuning generalizes to new datasets</h2>
+        <hr>
+        <p>
+           When we finetune on one dataset, we see improvement on another dataset, indicating improved generalization capabilities through multiagent finetuning.
+        </p>
+    </div>
+        <figure>
+            <a>
+                <center>
+                <img class="centered" width="90%" src="img/generalize.png"> 
+                </center>
+            </a>
+            <p class="caption">
+                Assessing GSM accuracy after finetuning on the MATH dataset. Multiagent finetuning has a significant improvement in performance over other finetuning methods<br>
+        </figure>
+    </div>
+
+    <br>
+    <!-- <div class="section">
+        <hr>
+        <h2>Related Works</h2>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="img/unipi.gif" alt="PontTuset" width="240" style="border-style: none">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://arxiv.org/pdf/2302.00111.pdf">
+                    <papertitle>Learning Universal Policies via Text-Guided Video Generation</papertitle>
+                  </a>
+                  <p> 
+                    We cast the sequential decision making problem as a text-conditioned video generation problem, where, given a text-encoded specification of a desired goal, a planner synthesizes a set of future frames depicting its planned actions in the future, and the actions will be extracted from the generated video. Our policy-as-video formulation can represent environments with different state and action spaces in a unified space of images, enabling learning and generalization across a wide range of robotic manipulation tasks.
+                  </p>
+                </td>
+        </tr>
+        <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="img/decisiondiff.gif" alt="PontTuset" width="240" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://openreview.net/pdf?id=sP1fo2K9DFG">
+                <papertitle>Is Conditional Generative Modeling all you need for Decision Making?</papertitle>
+              </a>
+              <p> 
+                We illustrate how conditional generative modeling is a powerful paradigm for decision-making, enabling us utilize a reward conditional model to effectively perform offline RL. We further illustrate how conditional generative modeling enables us to compose multiple different constraints and skills together.
+              </p>
+              <br>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="img/diffuser.gif" alt="PontTuset" width="240" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2205.09991">
+                <papertitle>Planning with Diffusion for Flexible Behavior Synthesis</papertitle>
+              </a>
+              <p> 
+                Diffuser is a denoising diffusion probabilistic model that plans by iteratively refining randomly sampled noise. The denoising process lends itself to flexible conditioning, by either using gradients of an objective function to bias plans toward high-reward regions or conditioning the plan to reach a specified goal.
+              </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="img/compose_pretrain.gif" alt="PontTuset" width="240" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2210.11522">
+                <papertitle>Composing Pretrained Models through Iterative Consensus</papertitle>
+              </a>
+              <p> 
+                We present a method to combine different large pretrained models together by having individual models communicate with each other through iterative consensus. We illustrate how this combination of models can do zero-shot VQA, image generation, reasoning, and image generation.
+              </p>
+            </td>
+        </tr>
+        </tbody></table>
+    </div> -->
+
+   
+    <!-- <section id="bibtex">
+        <h2>Bibtex</h2>
+        <div class="page-body"><pre id="ad6975be-3353-467d-ae48-6313d767ffa6" class="code"><code>
+            @inproceedings{
+                ajay2023is,
+                title={Is Conditional Generative Modeling all you need for Decision Making?},
+                author={Anurag Ajay and Yilun Du and Abhi Gupta and Joshua B. Tenenbaum and Tommi S. Jaakkola and Pulkit Agrawal},
+                booktitle={The Eleventh International Conference on Learning Representations },
+                year={2023},
+                url={https://openreview.net/forum?id=sP1fo2K9DFG}
+            }    
+        </code></pre><p id="1a3aa306-c4b8-4872-8fb0-411495c73d55" class="">
+        </p></div>
+
+    </section> -->
+
+
+
+    <!-- <section id="paper">
+        <h2>Paper</h2>
+        <hr>
+        <div class="flex-row">
+            <div class="download-thumb">
+            <div style="box-sizing: border-box; padding: 16px; margin: auto;">
+                <a href="https://energy-based-model.github.io/composing-pretrained-models/"><img class="screenshot" src="materials/thumb_finger.png"></a>
+            </div>
+        </div>
+            <div class="paper-stuff">
+                <p><b>Composing Ensembles of Pre-trained Models via Iterative Consensus</b></p>
+                <p>Shuang Li, Yilun Du, Joshua B. Tenenbaum, Antonio Torralba, Igor Mordatch</p>
+                <div><span class="material-icons"> description </span><a href="https://arxiv.org/abs/2210.06978"> arXiv version</a></div>
+                <div><span class="material-icons"> integration_instructions </span><a href="https://github.com/nv-tlabs/LION"> Code</a></div>
+            </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <!-- <section id="bibtex">
+        <h2>Citation</h2>
+        <hr>
+        <pre><code>@inproceedings{zeng2022lion,
+            title={LION: Latent Point Diffusion Models for 3D Shape Generation},
+            author={Xiaohui Zeng and Arash Vahdat and Francis Williams and Zan Gojcic and Or Litany and Sanja Fidler and Karsten Kreis},
+            booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+            year={2022}
+        }</code></pre>
+    </section> -->
+
+    <section>
+        This webpage template was recycled from <a href='https://nv-tlabs.github.io/LION/'>here</a>.
+        <center><p><a href='https://accessibility.mit.edu/'><b>Accessibility</b></a></p></center>
+    </section>
+    
+
+
+</div>
+</body>
+</html>
