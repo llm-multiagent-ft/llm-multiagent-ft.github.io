@@ -474,8 +474,13 @@ pre {
     <section id="method"/>
         <hr>
         <h2>Method</h2>
-            <figure>
+            <figure style="width: 100%;">
+		<a>
                 <img src="img/main4.png", style="width:950px">
+		</a>
+		<p class="caption" style="margin-bottom: 24px;">
+		<br>Caption text
+		</p>
             </figure>
             <div class="flex-row">
                 <p>
@@ -502,16 +507,23 @@ pre {
     <section id="results_overview"/>
     <hr>
     <h2>Results Overview</h2>
-        <br><br>
-        <div class="mx-auto">
-            <center><img class="card-img-top" src="img/multiagent_finetuning_results.png" style="width:950px"></center>
-        </div>
-        <center>We apply multiagent finetuning to 4 LLMs and find significant improvement in comparison to several other finetuning self-improvement methods.</center>
+    <figure style="width: 100%;">
+	<a>
+	<center><img src="img/multi-iters-ft.png", style="width:950px"></center>
+	</a>
+	<p class="caption" style="margin-bottom: 24px;">
+	<b>Performance after Multiple Rounds of Finetuning.</b> Finetuning a multiagent set of models allows results to consistently improve across multiple iterations of finetuning, while finetuning a single model leads to a plateau of performance.
+	</p>
+    </figure>
 
-        <div class="mx-auto">
-            <center><img class="card-img-top" src="img/multi-iters-ft.png" style="width:950px"></center>
-        </div>
-        <center>We apply multiple rounds of multiagent finetuning to several LLMs and find that results consistently improve across multiple iterations of finetuning.</center>
+    <figure style="width: 100%;">
+	<a>
+	<center><img src="img/multiagent_finetuning_results.png", style="width:950px"></center>
+	</a>
+	<p class="caption" style="margin-bottom: 24px;">
+	<b>Quantitative Comparison of Self-Improvement Methods.</b> Across for 4 different LLM models, we find that multiagent finetuning outperforms existing self-improvement methods (1 round of finetuning applied).
+	</p>
+    </figure>
     </section>
 
     <div class="section">
@@ -522,10 +534,12 @@ pre {
         </p>
         <figure>
             <a>
-                <img class="centered" width="95%" src="img/embed_diss-iters-ft.png"> 
+		<center>
+                <img class="centered" width="70%" src="img/embed_diss-iters-ft.png"> 
+		</center>
             </a>
-            <p class="caption-right">
-                <b>Diversity of proposals from agents during multiple iterations of multiagent finetuning in comparison to a baseline finetuning method. Diversity measured using embedding dissimilarity among T5 embeddings of agent responses. Multiagent finetuning has more diverse responses</b><br>
+            <p class="caption" style="margin-bottom: 24px;">
+                <b>Preservering Diversity Across Rounds of Finetuning.</b>  Multiagent finetuning is able to maintain more diverse responses over rounds of finetuning than finetuning a single model.<br>
         </figure>
     </div>
 
@@ -539,11 +553,12 @@ pre {
         <figure>
             <a>
                 <center>
-                <img class="centered" width="90%" src="img/generalize.png"> 
+                <img class="centered" width="60%" src="img/generalize.png"> 
                 </center>
             </a>
             <p class="caption">
-                Assessing GSM accuracy after finetuning on the MATH dataset. Multiagent finetuning has a significant improvement in performance over other finetuning methods<br>
+                <b>Generalization to New Datasets</b> We assess the extend to which models that are self-improved  on the MATH dataset can generalize to GSM. Multiagent finetuning has a significant improvement in performance over other finetuning methods.<br>
+	    </p>
         </figure>
     </div>
 
