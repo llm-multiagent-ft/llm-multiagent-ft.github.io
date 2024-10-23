@@ -514,6 +514,136 @@ pre {
         <p>
            We first study the extent to which multiagent finetuning can lead to self-improvement when compared to existing approach to self-improvement. We study both self-improvement in a single round of finetuning as well as across multiple rounds of finetuning.
         </p>
+        <div id="interactive-panel">
+            <h3>Interactive Evolution of Generated Samples</h3>
+            
+            <div id="slider-container">
+                <label for="round-slider">Select a finetuning round:</label>
+                <input type="range" id="round-slider" min="1" max="3" value="1" oninput="updateSamples(this.value)">
+                <span id="slider-value">Round 1</span>
+            </div>
+    
+            <!-- First Row: Generator Agents -->
+            <div class="row">
+                <div class="column3">
+                    <h4>Generator Agent 1</h4>
+                    <p id="generator1-sample">Sample from Generator Agent 1 - Round 1</p>
+                </div>
+                <div class="column3">
+                    <h4>Generator Agent 2</h4>
+                    <p id="generator2-sample">Sample from Generator Agent 2 - Round 1</p>
+                </div>
+                <div class="column3">
+                    <h4>Generator Agent 3</h4>
+                    <p id="generator3-sample">Sample from Generator Agent 3 - Round 1</p>
+                </div>
+            </div>
+    
+            <!-- Second Row: Critic Agents -->
+            <div class="row">
+                <div class="column3">
+                    <h4>Critic Agent 1</h4>
+                    <p id="critic1-sample">Sample from Critic Agent 1 - Round 1</p>
+                </div>
+                <div class="column3">
+                    <h4>Critic Agent 2</h4>
+                    <p id="critic2-sample">Sample from Critic Agent 2 - Round 1</p>
+                </div>
+                <div class="column3">
+                    <h4>Critic Agent 3</h4>
+                    <p id="critic3-sample">Sample from Critic Agent 3 - Round 1</p>
+                </div>
+            </div>
+        </div>
+    
+        <style>
+            #interactive-panel {
+                margin-top: 20px;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                border: 1px solid #ddd;
+            }
+    
+            #slider-container {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            input[type="range"] {
+                width: 60%;
+                margin: 10px;
+            }
+    
+            #samples-container {
+                text-align: center;
+            }
+    
+            .column3 {
+                padding: 10px;
+                border-right: 1px solid #ddd;
+            }
+    
+            .column3:last-child {
+                border-right: none;
+            }
+    
+            #samples-container h4 {
+                font-weight: 500;
+            }
+    
+            .row {
+                margin-top: 20px;
+            }
+        </style>
+    
+        <script type="text/javascript">
+            // Example samples data for each round for both generator and critic agents.
+            const samplesData = {
+                1: {
+                    generator1: "Sample from Generator Agent 1 - Round 1",
+                    generator2: "Sample from Generator Agent 2 - Round 1",
+                    generator3: "Sample from Generator Agent 3 - Round 1",
+                    critic1: "Sample from Critic Agent 1 - Round 1",
+                    critic2: "Sample from Critic Agent 2 - Round 1",
+                    critic3: "Sample from Critic Agent 3 - Round 1"
+                },
+                2: {
+                    generator1: "Sample from Generator Agent 1 - Round 2",
+                    generator2: "Sample from Generator Agent 2 - Round 2",
+                    generator3: "Sample from Generator Agent 3 - Round 2",
+                    critic1: "Sample from Critic Agent 1 - Round 2",
+                    critic2: "Sample from Critic Agent 2 - Round 2",
+                    critic3: "Sample from Critic Agent 3 - Round 2"
+                },
+                3: {
+                    generator1: "Sample from Generator Agent 1 - Round 3",
+                    generator2: "Sample from Generator Agent 2 - Round 3",
+                    generator3: "Sample from Generator Agent 3 - Round 3",
+                    critic1: "Sample from Critic Agent 1 - Round 3",
+                    critic2: "Sample from Critic Agent 2 - Round 3",
+                    critic3: "Sample from Critic Agent 3 - Round 3"
+                },
+                // ... add more rounds as needed
+            };
+    
+            function updateSamples(round) {
+                document.getElementById('slider-value').innerText = 'Round ' + round;
+    
+                // Update Generator Agent Samples
+                document.getElementById('generator1-sample').innerText = samplesData[round].generator1;
+                document.getElementById('generator2-sample').innerText = samplesData[round].generator2;
+                document.getElementById('generator3-sample').innerText = samplesData[round].generator3;
+    
+                // Update Critic Agent Samples
+                document.getElementById('critic1-sample').innerText = samplesData[round].critic1;
+                document.getElementById('critic2-sample').innerText = samplesData[round].critic2;
+                document.getElementById('critic3-sample').innerText = samplesData[round].critic3;
+            }
+    
+            // Initialize with round 1 samples.
+            updateSamples(1);
+        </script>
     <figure style="width: 100%;">
 	<a>
 	<center><img src="img/multi-iters-ft.png", style="width:950px"></center>
