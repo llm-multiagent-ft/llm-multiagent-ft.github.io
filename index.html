@@ -515,11 +515,11 @@ pre {
            We first study the extent to which multiagent finetuning can lead to self-improvement when compared to existing approach to self-improvement. We study both self-improvement in a single round of finetuning as well as across multiple rounds of finetuning.
         </p>
         <div id="interactive-panel">
-            <h3>Interactive Evolution of Generated Samples</h3>
+            <h3><center>In triangle ABC, AB = 13, BC = 14, and AC = 15. Point D is chosen on AB so that AD:DB = 3:2. Point E is chosen on BC so that BE:EC = 1:2. Calculate the length of DE.</center></h3>
             
             <div id="slider-container">
                 <label for="round-slider">Select a finetuning round:</label>
-                <input type="range" id="round-slider" min="1" max="3" value="1" oninput="updateSamples(this.value)">
+                <input type="range" id="round-slider" min="0" max="3" value="1" oninput="updateSamples(this.value)">
                 <span id="slider-value">Round 1</span>
             </div>
     
@@ -527,15 +527,15 @@ pre {
             <div class="row">
                 <div class="column3">
                     <h4>Generator Agent 1</h4>
-                    <p id="generator1-sample">Sample from Generator Agent 1 - Round 1</p>
+                    <p id="generator1-sample">Sample from Generator Agent 1 - Round 0</p>
                 </div>
                 <div class="column3">
                     <h4>Generator Agent 2</h4>
-                    <p id="generator2-sample">Sample from Generator Agent 2 - Round 1</p>
+                    <p id="generator2-sample">Sample from Generator Agent 2 - Round 0</p>
                 </div>
                 <div class="column3">
                     <h4>Generator Agent 3</h4>
-                    <p id="generator3-sample">Sample from Generator Agent 3 - Round 1</p>
+                    <p id="generator3-sample">Sample from Generator Agent 3 - Round 0</p>
                 </div>
             </div>
     
@@ -543,15 +543,15 @@ pre {
             <div class="row">
                 <div class="column3">
                     <h4>Critic Agent 1</h4>
-                    <p id="critic1-sample">Sample from Critic Agent 1 - Round 1</p>
+                    <p id="critic1-sample">Sample from Critic Agent 1 - Round 0</p>
                 </div>
                 <div class="column3">
                     <h4>Critic Agent 2</h4>
-                    <p id="critic2-sample">Sample from Critic Agent 2 - Round 1</p>
+                    <p id="critic2-sample">Sample from Critic Agent 2 - Round 0</p>
                 </div>
                 <div class="column3">
                     <h4>Critic Agent 3</h4>
-                    <p id="critic3-sample">Sample from Critic Agent 3 - Round 1</p>
+                    <p id="critic3-sample">Sample from Critic Agent 3 - Round 0</p>
                 </div>
             </div>
         </div>
@@ -600,6 +600,14 @@ pre {
         <script type="text/javascript">
             // Example samples data for each round for both generator and critic agents.
             const samplesData = {
+                0: {
+                    generator1: "Sample from Generator Agent 1 - Round 0",
+                    generator2: "Sample from Generator Agent 2 - Round 0",
+                    generator3: "Sample from Generator Agent 3 - Round 0",
+                    critic1: "Sample from Critic Agent 1 - Round 0",
+                    critic2: "Sample from Critic Agent 2 - Round 0",
+                    critic3: "Sample from Critic Agent 3 - Round 0"
+                },
                 1: {
                     generator1: "Sample from Generator Agent 1 - Round 1",
                     generator2: "Sample from Generator Agent 2 - Round 1",
