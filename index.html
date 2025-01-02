@@ -494,7 +494,7 @@ pre {
             </div>
             <div class="flex-row">
                 <p>
-                    <b>Finetuning Generator Agents:</b> We finetune a set of models as "generation agents", which generate initial answers to queries. We finetune each model with the respective model's answers in the finetuning dataset that agree with final majority voted answer. By only finetuning each model on its own correctly generated answers, we allow each model to specialize over rounds of finetuning.
+                    <b>Finetuning Generation Agents:</b> We finetune a set of models as "generation agents", which generate initial answers to queries. We finetune each model with the respective model's answers in the finetuning dataset that agree with final majority voted answer. By only finetuning each model on its own correctly generated answers, we allow each model to specialize over rounds of finetuning.
                 </p>
             </div>
             <div class="flex-row">
@@ -504,7 +504,7 @@ pre {
             </div>
             <div class="flex-row">
                 <p>
-                    <b>Inference:</b> At inference time, we combined finetuned generator and critic models together through a multiagent debate procedure.  In this figure, we illustrate a single finetuning iteration. Applying multiple rounds of finetuning iterations can significantly boost performance and encourages more specialization across models.
+                    <b>Inference:</b> At inference time, we combined finetuned generation and critic models together through a multiagent debate procedure.  In this figure, we illustrate a single finetuning iteration. Applying multiple rounds of finetuning iterations can significantly boost performance and encourages more specialization across models.
                 </p>
             </div>
     </section>
@@ -527,16 +527,16 @@ pre {
             <!-- First Row: Generator Agents -->
             <div class="row">
                 <div class="column3">
-                    <h4>Generator Agent 1</h4>
-                    <p id="generator1-sample">Sample from Generator Agent 1 - Round 0</p>
+                    <h4>Generation Agent 1</h4>
+                    <p id="generator1-sample">Sample from Generation Agent 1 - Round 0</p>
                 </div>
                 <div class="column3">
-                    <h4>Generator Agent 2</h4>
-                    <p id="generator2-sample">Sample from Generator Agent 2 - Round 0</p>
+                    <h4>Generation Agent 2</h4>
+                    <p id="generator2-sample">Sample from Generation Agent 2 - Round 0</p>
                 </div>
                 <div class="column3">
-                    <h4>Generator Agent 3</h4>
-                    <p id="generator3-sample">Sample from Generator Agent 3 - Round 0</p>
+                    <h4>Generation Agent 3</h4>
+                    <p id="generator3-sample">Sample from Generation Agent 3 - Round 0</p>
                 </div>
             </div>
     
