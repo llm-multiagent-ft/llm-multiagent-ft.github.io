@@ -603,35 +603,59 @@ pre {
             const samplesData = {
                 0: {
                     generator1: "To find the greatest common divisor (GCD) of 315 and 108, we can use the Euclidean algorithm... Divide 315 by 108: 315 = 2 × 108 + 99\n2. Divide 108 by 99: 108 = 1 × 99 + 9\n3. Divide 99 by 9: 99 = 11 × 9 + 0... The GCD is the last non-zero remainder, which is 9.",
+                    g1_color: "DarkSeaGreen",
                     generator2: "To find the greatest common divisor (GCD) of 315 and 108, I will use the prime factors. The prime factorization of 315 is 3x3x5x7... The prime factorization of 108 is 2x2x3x3x3... The common prime factors are 3. So GCD is 3.",
+                    g2_color: "lightcoral",
                     generator3: "Using the Euclidean algorithm... 315 / 108 = 2 x 108 + 91. Since the remainder is non-zero, we divide again. 108 / 91 = 1 x 91 + 25. Since the remainder is non-zero, we divide again. 91 / 25 = 3 x 25 + 16... 25 / 16 = 1 x 16 + 9... The GCD is 2.",
+                    g3_color: "lightcoral",
                     critic1: "Agent 1 made a mistake in the prime factorization approach, incorrectly calculating the common factor as 3. Agent 2 used the Euclidean algorithm correctly, finding the GCD to be 2. So the final answer is 2.",
+                    c1_color: "lightcoral",
                     critic2: "Agent 1’s solution with the Euclidean algorithm is accurate and provides a clear, step-by-step approach leading to the GCD of 9. Agent 2’s application of the Euclidean algorithm is incorrect as it makes an initial mistake in the first division. Therefore, the correct answer is 9.",
-                    critic3: "Agent 2 uses prime factorization... incorrectly finding that the GCD is 3 from the prime factors. Agent 1 finds the correct answer of 9 using the Euclidean algorithm correctly... The correct answer is 9."
+                    c2_color: "DarkSeaGreen",
+                    critic3: "Agent 2 uses prime factorization... incorrectly finding that the GCD is 3 from the prime factors. Agent 1 finds the correct answer of 9 using the Euclidean algorithm correctly... The correct answer is 9.",
+                    c3_color: "DarkSeaGreen"
                 },
                 1: {
                     generator1: "I will apply the Euclidean algorithm... 315 = 2 × 108 + 99. Since the remainder is non-zero, we divide again. 108 = 1 × 99 + 9. I will divide again. 99 = 11 × 9 + 0. The GCD is the last non-zero remainder, which is 9.",
+                    g1_color: "DarkSeaGreen",
                     generator2: "To find the greatest common divisor (GCD) of 315 and 108, we can list the common factors between the two. 108 has the factors: 1,2,3,4,6,9,... 315 has the factors: 1,3,5,7,21,... So the GCD is 3.",
+                    g2_color: "lightcoral",
                     generator3: "The prime factorization of 315 is 5 x 3^2 x 7. The prime factorization of 108 is 2^2 x 3^3... The largest common factor is 3^2. So GCD is 3^2 = 9.",
+                    g3_color: "DarkSeaGreen",
                     critic1: "Agent 1 lists the factors of both numbers while Agent 2... uses... prime factorization. After analyzing the solutions of the two additional agents, the original solution using the Euclidean algorithm is correct. The original solution found that the GCD is 9. Therefore, my final answer is 9.",
+                    c1_color: "DarkSeaGreen",
                     critic2: "To find the greatest common divisor (GCD) of 315 and 108, Agent 1 uses the Euclidean algorithm while Agent 2 uses the prime factorization. Both agents find the correct answer...which is 9.",
-                    critic3: "I have reviewed both agent responses for finding the greatest common divisor of 315 and 108. Agent 1... uses the Euclidean Algorithm while Agent 2... uses common factors. Agent 2 makes a mistake by mising the prime factors of 315... The final answer is 9, as seen from Agent 1."
+                    c2_color: "DarkSeaGreen",
+                    critic3: "I have reviewed both agent responses for finding the greatest common divisor of 315 and 108. Agent 1... uses the Euclidean Algorithm while Agent 2... uses common factors. Agent 2 makes a mistake by mising the prime factors of 315... The final answer is 9, as seen from Agent 1.",
+                    c3_color: "DarkSeaGreen"
                 },
                 2: {
                     generator1: "In order to find the greatest common divisor (GCD) of 315 and 108, we can use the Euclidean algorithm. First, divide 315 by 108 to get a 2 with a remainder of 99. Then divide 108 by 99... Finally we divide 99 by 9 to get 11 with a remainder of 0... So the GCD is 9.",
+                    g1_color: "DarkSeaGreen",
                     generator2: "Let's find the greatest common divisor (GCD) of 315 and 108 by listing the common factors between the two. 315 has the factors 1,3,5,7,9,15,... 108 has the factors 1,2,3,4,6,9,... We can see that 9 is the largest factor that is shared. So the GCD of 315 and 108 is 9.",
+                    g2_color: "DarkSeaGreen",
                     generator3: "We can find the greatest common divisor (GCD) of 315 and 108 by using prime factorization. The prime factors of 108 is 2^2 x 3^3. The prime factors of 315 is 3^2 x 5 x 7. We find the largest factor... which is 3^2 = 9. So the GCD is 9...",
+                    g3_color: "DarkSeaGreen",
                     critic1: "To find the GCD between 315 and 108, one agent uses the common factors between the two numbers while the other agent uses the prime factorization, leading to the same result. The results of both approaches... match the previous answer using the Euclidean algorithm. Therefore, I agree... the answer is 9.",
+                    c1_color: "DarkSeaGreen",
                     critic2: "Agent 1 uses the Euclidean algorithm correctly to find that the GCD of 315 and 108 is 9. This solution is simple and easy to follow. The other agent uses prime factors to find the solution. This is slightly more complex and may have errors. Because of this, I will use the answer of the first. The GCD is 9.",
-                    critic3: "I have analyzed both agent responses. Since both agents achieve the same answer, I will choose the response which is simpler. I see that Agent 2 lists the factors of 315 and 108 to find the correct answer. This is a simpler approach than the Euclidean algorithm. I agree with the answer from second agent... 9."
+                    c2_color: "DarkSeaGreen",
+                    critic3: "I have analyzed both agent responses. Since both agents achieve the same answer, I will choose the response which is simpler. I see that Agent 2 lists the factors of 315 and 108 to find the correct answer. This is a simpler approach than the Euclidean algorithm. I agree with the answer from second agent... 9.",
+                    c3_color: "DarkSeaGreen"
                 },
                 3: {
                     generator1: "...divide 315 by 108 to get a 2 with a remainder of 99. Then divide 108 by 99... Finally we divide 99 by 9 to get 11 with a remainder of 0... So the GCD is 9.",
+                    g1_color: "DarkSeaGreen",
                     generator2: "...greatest common divisor (GCD) of 315 and 108, we can list the common factors between the two. 108 has the factors: 1,2,3,4,6,9,... 315 has the factors: 1,3,5,7,9,15,21,... So the GCD is 9.",
+                    g2_color: "DarkSeaGreen",
                     generator3: "The prime factors of 315 is 3^2 x 5 x 7. The prime factors of 108 is 2^2 x 3^3. We find the largest factor... 9. So the GCD is 9.",
+                    g3_color: "DarkSeaGreen",
                     critic1: "...To find the the greatest common divisor (GCD) of 315 and 108, I will analyze the responses from other agents with the prior response. I see that... one agent uses prime factorization... while the other agent uses factors. Both agents get a final answer of 9 which aligns with the previous response... the GCD of 315 and 108 is 9.",
+                    c1_color: "DarkSeaGreen",
                     critic2: "Agent 1 uses the Euclidean algorithm to find the GCD of 315 and 108. Agent 2 uses prime factors of 315 and 108. Agent 2's answer is easy and simple the follow. I have reviewed the response and see no error. Therefore, the final answer is 9.",
-                    critic3: "To verify the responses from other agents, I carry out the steps of the Euclidean algorithm to find the GCD of 315 and 108. First, I divide 315 by 108... I then divide 99 by 9 and get 11 with a remainder of 0. So the final answer is 9. This aligns with my previous response."
+                    c2_color: "DarkSeaGreen",
+                    critic3: "To verify the responses from other agents, I carry out the steps of the Euclidean algorithm to find the GCD of 315 and 108. First, I divide 315 by 108... I then divide 99 by 9 and get 11 with a remainder of 0. So the final answer is 9. This aligns with my previous response.",
+                    c3_color: "DarkSeaGreen",
                 },
             };
     
@@ -647,6 +671,13 @@ pre {
                 document.getElementById('critic1-sample').innerText = samplesData[round].critic1;
                 document.getElementById('critic2-sample').innerText = samplesData[round].critic2;
                 document.getElementById('critic3-sample').innerText = samplesData[round].critic3;
+
+                document.getElementById('generator1-sample').parentElement.style.backgroundColor = samplesData[round].g1_color;
+                document.getElementById('generator2-sample').parentElement.style.backgroundColor = samplesData[round].g2_color;
+                document.getElementById('generator3-sample').parentElement.style.backgroundColor = samplesData[round].g3_color;
+                document.getElementById('critic1-sample').parentElement.style.backgroundColor = samplesData[round].c1_color;
+                document.getElementById('critic2-sample').parentElement.style.backgroundColor = samplesData[round].c2_color;
+                document.getElementById('critic3-sample').parentElement.style.backgroundColor = samplesData[round].c3_color;
             }
     
             // Initialize with round 1 samples.
